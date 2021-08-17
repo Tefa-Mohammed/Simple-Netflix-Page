@@ -1,0 +1,8 @@
+red-color: #e50914
+background-color-button: rgba(109,109,110,0.7)
+white-color: #fff
+sections-color: #E5EE5E5
+background-color1: #141414
+background-color2: #2E2E2E
+font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+text-shadow: 2px 2px 4px rgb(0 0 0 / 45%)

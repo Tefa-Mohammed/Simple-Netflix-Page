@@ -1,0 +1,625 @@
+html {
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body {
+  background-color: #141414;
+}
+/* ========START NAVBAR========== */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 15px 35px;
+  z-index: 9;
+  transition: all 0.5s ease-in-out;
+}
+nav .content a.brand {
+  width: 8%;
+  margin: 0 30px 0 0;
+}
+nav .content .navbar-links {
+  width: 45%;
+}
+nav .content ul {
+  margin: 0;
+}
+nav .content ul li {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  color: #fff;
+  margin-left: 5px;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+}
+nav .content ul li a {
+  color: #e5e5e5;
+}
+nav .content ul li a.active {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+nav .form {
+  color: #fff;
+  font-size: 1.1rem;
+}
+/* ======END NAVBAR======= */
+
+/* =====START HEADER SECTION===== */
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/header.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header .header_content p {
+  max-width: 85%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  line-height: 1.4;
+  color: #fff;
+  margin: 15px 0;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+}
+header .header_content .buttons .btn:first-child {
+  background-color: #fff;
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+header .header_content .buttons .btn:first-child:hover {
+  background-color: #ffffffb5;
+}
+header .header_content .buttons .btn:last-child {
+  background-color: rgba(109, 109, 110, 0.9);
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+header .header_content .buttons .btn:last-child:hover {
+  background-color: rgba(109, 109, 110, 0.7);
+}
+header .num_rat {
+  width: 90px;
+  height: 35px;
+  border: solid 3px #dcdcdc;
+  border-style: none none none solid;
+  background-color: rgba(51, 51, 51, 0.6);
+  color: #fff;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 25%;
+}
+/* =====END HEADER SECTION===== */
+
+/* =====START TV DRAMA SECTION AND CONTINUE WATCHING SECTION====== */
+.drama {
+  position: relative;
+  right: 0;
+  margin-top: -75px;
+  background: linear-gradient(
+    rgba(20, 20, 20, 0.1),
+    rgba(20, 20, 20, 0.9),
+    rgba(20, 20, 20, 1)
+  );
+}
+.dramas_videos span {
+  margin-right: 3px;
+  cursor: pointer;
+}
+.carousel-inner {
+  overflow: visible;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  width: 48px !important;
+  border-radius: 3px !important;
+  font-size: 35px !important;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  width: 48px !important;
+  border-radius: 3px !important;
+  font-size: 45px !important;
+}
+/* =====Movie Card When Hover===== */
+.carousel-item div span .title,
+.continue .continue_videos .title,
+.top .top_videos .title {
+  display: none;
+  position: absolute;
+  top: -75px;
+  z-index: 2;
+}
+.carousel-item div span:nth-of-type(5) .title {
+  right: 0;
+}
+.carousel-item div span .title .card,
+.continue .continue_videos .title .card,
+.top .top_videos .title .card {
+  border: none;
+  border-radius: 5px;
+  background-color: #141414;
+  box-shadow: 0px 0px 12px 2px rgb(0, 0, 0);
+}
+/* ====CARD ICONS==== */
+.carousel-item div span .title .card .card-title .icons span,
+.carousel-item div span .title .card .card-title .info span,
+.continue .continue_videos .title .card .card-title .icons span,
+.continue .continue_videos .title .card .card-title .info span {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(95, 95, 95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 5px;
+}
+.carousel-item div span .title .card .card-title .icons span:first-child,
+.continue .continue_videos .title .card .card-title .icons span:first-child {
+  background-color: #fff;
+  border: none;
+}
+.carousel-item div span .title .card .card-title .icons span i,
+.carousel-item div span .title .card .card-title .info span i,
+.continue .continue_videos .title .card .card-title .icons span i,
+.continue .continue_videos .title .card .card-title .info span i {
+  font-size: 14px;
+  color: #fff;
+}
+.carousel-item div span .title .card .card-title .icons span:first-child i,
+.continue .continue_videos .title .card .card-title .icons span:first-child i {
+  color: #141414;
+}
+/* ===CARD TITLE==== */
+.carousel-item div span .title .card .card-text span:first-of-type,
+.carousel-item div span .title .card .card-text span:nth-of-type(3),
+.continue .continue_videos .title .card .card-text span:first-of-type,
+.continue .continue_videos .title .card .card-text span:nth-of-type(3) {
+  color: #3fb75d;
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+  margin: 0;
+}
+.carousel-item div span .title .card .card-text span:nth-of-type(2),
+.carousel-item div span .title .card .card-text span:nth-of-type(4),
+.continue .continue_videos .title .card .card-text span:nth-of-type(2),
+.continue .continue_videos .title .card .card-text span:nth-of-type(4) {
+  width: 45px;
+  height: 26px;
+  border: 1px solid rgb(95, 95, 95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 10px;
+  padding: 10px 5px;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  background-color: rgba(20, 20, 20, 1);
+}
+.carousel-item div span .title .card .card-text span:nth-of-type(3),
+.continue .continue_videos .title .card .card-text span:nth-of-type(3) {
+  color: #fff;
+}
+.carousel-item div span .title .card .card-text span:nth-of-type(4),
+.continue .continue_videos .title .card .card-text span:nth-of-type(4) {
+  width: 25px;
+  height: 15px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  padding: 8px 15px;
+}
+/* =====MOVIE DESCRIPTION==== */
+.carousel-item div span .title .card .mov-title,
+.continue .continue_videos .title .card .mov-title {
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 1.2px;
+}
+.carousel-item div span .title .card .mov-title i,
+.continue .continue_videos .title .card .mov-title i {
+  color: #2e2e2e;
+  font-size: 8px;
+  margin: 0 5px;
+}
+/* =====END TV DRAMA SECTION AND CONTINUE WATCHING SECTION====== */
+
+/* =====START CONTINUE WATCHING SECTION====== */
+.continue {
+  background-color: #2e2e2e;
+  margin: 0;
+}
+.continue .row {
+  margin: 0;
+}
+.continue .row .col-10 {
+  padding: 0;
+}
+.continue .continue_videos span {
+  cursor: pointer;
+}
+.continue .continue_videos span .image::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 4px;
+  background-color: #ffffff4d;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* =====END CONTINUE WATCHING SECTION====== */
+
+/* ========START TOP 10 IN EGYPT SECTION======= */
+.num {
+  font-size: 215px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: -64px;
+  right: 115px;
+  -webkit-text-stroke: 4px #2e2e2e;
+  font-weight: bold;
+  letter-spacing: -33px;
+}
+.top .slider-top span .last-num {
+  font-size: 195px !important;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: -54px;
+  right: 160px;
+  -webkit-text-stroke: 4px #2e2e2e;
+  font-weight: bold;
+  letter-spacing: -33px;
+}
+.top-image {
+  z-index: 1;
+}
+.slick-prev,
+.slick-next {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  width: 48px !important;
+  border-radius: 3px !important;
+  font-size: 35px !important;
+  height: 100%;
+}
+.slick-next {
+  right: 25px;
+}
+.slick-prev {
+  left: 0;
+  z-index: 4;
+}
+.slick-prev::before,
+.slick-next::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.2;
+}
+
+/* ========END TOP 10 IN EGYPT SECTION======= */
+
+/* =====START FOOTER SECTION===== */
+footer {
+  color: #808080;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+}
+footer .icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+footer .icons span {
+  color: #808080;
+  margin: 5px 25px 20px 0;
+}
+footer .icons span i {
+  font-size: 1.9rem;
+}
+footer button {
+  background-color: transparent;
+  border: 1px solid #808080;
+  margin: 20px 0;
+  padding: 5px 8px;
+  color: #808080;
+  letter-spacing: 1.2px;
+}
+footer button:hover {
+  background-color: #808080;
+  color: #000;
+}
+/* =====END FOOTER SECTION===== */
+
+/* ========ADDRESS OF ALL SECTIONS======= */
+.section_address {
+  color: #e5e5e5;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  margin-bottom: 15px;
+}
+
+/* =========ICONS IN CARDS TITLE========== */
+.icon-alert {
+  position: absolute;
+  top: -50px;
+  padding: 3px 0px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 3px;
+  letter-spacing: 1.2px;
+  width: 140px;
+  text-align: center;
+  box-shadow: 0px 0px 12px 2px rgb(0 0 0);
+  display: none;
+  font-weight: 600;
+  z-index: 3;
+}
+.info .icon-alert {
+  width: 165px;
+}
+.icon-alert::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 1px;
+  border: 10px solid;
+  border-color: #fff transparent transparent transparent;
+}
+.icons span:hover div:first-child,
+.info span:hover div:first-child {
+  display: block;
+}
+
+/* =====START INFO BOX==== */
+.info_container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 99;
+  display: none;
+  overflow-y: scroll !important;
+}
+.info-box {
+  width: 65%;
+  margin: 45px auto;
+  position: relative;
+  background-color: rgba(20, 20, 20, 1);
+  box-shadow: 0 0 14px 2px rgb(20, 20, 20);
+  overflow: hidden;
+}
+.info-header-logo {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.info_container .info-box .card-body {
+  margin-top: -95px;
+  z-index: 6;
+}
+.info_container .info-box .card-body .card-title {
+  margin-bottom: 95px;
+}
+/* Info Box Icons  */
+.info_container .info-box .card-body .card-title .icons span,
+.info_container .info-box .card-body .card-title .info span,
+.info-box .close {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(95, 95, 95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 5px;
+  z-index: 6;
+  cursor: pointer;
+}
+.info_container .info-box .card-body .card-title .icons span:hover,
+.info_container .info-box .card-body .card-title .info span:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+.info_container .info-box .card-body .card-title .icons span:first-child {
+  background-color: #fff;
+  border: none;
+}
+.info_container .info-box .card-body .card-title .icons span i,
+.info_container .info-box .card-body .card-title .info span i {
+  font-size: 14px;
+  color: #fff;
+}
+/* Close Icon  */
+.info-box .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgb(20, 20, 20) !important;
+  opacity: 1;
+  border: none;
+}
+.info-box .close i {
+  font-size: 14px;
+  color: #fff;
+}
+.info_container .info-box .card-body .card-title .icons span:first-child i {
+  color: #141414;
+}
+.info_container .info-box .card-body .card-text span:first-of-type,
+.info_container .info-box .card-body .card-text span:nth-of-type(3) {
+  color: #3fb75d;
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+  margin: 0;
+}
+.info_container .info-box .card-body .card-text span:nth-of-type(2),
+.info_container .info-box .card-body .card-text span:nth-of-type(4) {
+  width: 45px;
+  height: 26px;
+  border: 1px solid rgb(95, 95, 95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 10px;
+  padding: 10px 5px;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  background-color: rgba(20, 20, 20, 1);
+}
+.info_container .info-box .card-body .card-text span:nth-of-type(3) {
+  color: #fff;
+}
+.info_container .info-box .card-body .card-text span:nth-of-type(4) {
+  width: 25px;
+  height: 15px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  padding: 8px 15px;
+}
+/* Paragraph To Description The Move  */
+.info_container .info-box .card-body .mov-title {
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 1.2px;
+  line-height: 1.6;
+}
+/* Style Of Casting  */
+.info_container .info-box .card-body .casting {
+  font-size: 0.9rem;
+  color: #fff;
+}
+.info_container .info-box .card-body .casting span {
+  color: #777;
+}
+/* EPISODES WORD */
+.info_container .info-box .card-body .episodes .row div:first-child {
+  color: #fff;
+  font-size: 1.6rem;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+}
+/* Select Button Of Seasons  */
+.info_container .info-box .card-body .episodes .row button {
+  background-color: rgb(36, 36, 36) !important;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+  border: 1.5px solid rgb(77, 77, 77);
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 5px !important;
+  margin-left: 15px;
+}
+.info_container .info-box .card-body .episodes .row button:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* Episodes Box And Hover On It  */
+.info_container .info-box .card-body .episodes .season {
+  border-bottom: 1px solid #404040;
+  padding: 20px 10px;
+}
+.info_container .info-box .card-body .episodes .season:hover {
+  background-color: #333;
+  border-radius: 5px;
+}
+/* Number Of Episodes */
+.info_container .info-box .card-body .episodes .season .row .col-1 {
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Play Icon On Image Of Episodes Ad Hover */
+.info_container .info-box .card-body .episodes .season .row .col-3 span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #414040;
+}
+.info_container .info-box .card-body .episodes .season .row .col-3 span i {
+  color: #fff;
+}
+.info_container .info-box .card-body .episodes .season:hover .row .col-3 span {
+  display: flex;
+}
+/* Info About Episodes Header And Paragraph */
+.info_container .info-box .card-body .episodes .season .col-8 .header {
+  font-size: 1.1rem;
+  letter-spacing: 1.2px;
+  color: #fff;
+}
+.info_container .info-box .card-body .episodes .season .col-8 p {
+  margin: 0;
+  color: #d2d2d2;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+}
+/* =====END INFO BOX==== */
+
+/* =========Icon To Top======= */
+.to_top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+}
+.to_top span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.to_top i {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+/* =======MEDIA QUERY==== */
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
