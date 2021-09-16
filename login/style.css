@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* =====Background Page======= */
+.main_page {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("EG-en-20210823-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main_page .overlay {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* =======THE HEADER==== */
+.header {
+  padding: 20px 50px;
+}
+.header img {
+  width: 15%;
+}
+
+/* =========START LOGIN FORM========= */
+.form h2 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  letter-spacing: 1.3px;
+}
+.form form {
+  min-height: 630px;
+  padding: 60px 68px 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+form .wrapper {
+  width: 300px;
+  background-color: #333333;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 16px 20px 0;
+  border-bottom: 2px solid #e87c03;
+}
+.wrapper:hover {
+  background-color: #454545;
+}
+form .wrapper .input_data {
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+.wrapper .input_data input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  caret-color: #fff;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+}
+.wrapper .input_data input:focus {
+  outline: none;
+}
+.input_data input:focus ~ label,
+.input_data input:valid ~ label {
+  -webkit-transform: translateY(-17px);
+  transform: translateY(-17px);
+  font-size: 13px;
+  color: #8c8c8c;
+}
+.wrapper .input_data label {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  color: #8c8c8c;
+  pointer-events: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+}
+.invalid-feedback {
+  color: #e87c03;
+  letter-spacing: 1.1px;
+}
+form .btn,
+form .btn:hover {
+  background-color: #e50914;
+  color: #fff;
+  letter-spacing: 1.3px;
+  font-size: 18px;
+  padding: 10px 0;
+  margin: 35px 0 10px 0;
+}
+
+.remember input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+.remember label {
+  position: relative;
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: 1.3px;
+  padding-left: 25px;
+}
+.remember label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border: 0.5px solid #e87c03;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.remember input[type="checkbox"]:checked + label::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 14px;
+  content: "\f00c";
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #e87c03;
+}
+.remember a {
+  color: #8c8c8c;
+  text-decoration: none;
+}
+.remember a:hover {
+  color: #8c8c8c;
+  text-decoration: underline;
+}
+.new {
+  font-size: 20px;
+  color: #737373;
+  /* letter-spacing: 1px; */
+}
+.new a {
+  color: #fff;
+  text-decoration: none;
+}
+.new a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+/* =========END LOGIN FORM========= */
+
+/* =======START FOOOTEEERRR====== */
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 35px 85px;
+}
+footer p {
+  color: #757575;
+  font-size: 21px;
+  letter-spacing: 1.1px;
+  margin-bottom: 25px;
+}
+footer ul li {
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  display: inline-block;
+  min-width: 100px;
+  width: 24%;
+  padding-right: 12px;
+  font-size: 15px;
+  color: #757575;
+}
+li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #757575;
+}
+li a:hover {
+  text-decoration: underline;
+  font-size: 15px;
+  color: #757575;
+}
+/* =======END FOOOTEEERRR====== */
+/* ============START MEDIA QUERY======= */
+@media (max-width: 768px) {
+  .form {
+    width: 100% !important;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  form {
+    width: 100% !important;
+  }
+  .form .wrapper {
+    width: 100%;
+  }
+  footer ul li {
+    width: 49%;
+  }
+}
+/* ============END MEDIA QUERY======= */
+.form-control:focus,
+.btn:focus,
+.is-invalid:focus,
+.is-valid:focus {
+  outline: none;
+  box-shadow: none !important;
+  border: none !important;
+}

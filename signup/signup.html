@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix</title>
+  <link rel="shortcut icon" href="link.svg">
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="main_page">
+    <div class="overlay">
+      <div class="header w-100">
+        <img src="logo.png" alt="" class="img-fluid">
+      </div>
+
+      <div class="form d-flex align-items justify-content-center w-100 mb-0 mb-md-5">
+        <form action="" class="form-row">
+          <h2>Sign Up</h2>
+          <div class="wrapper mb-5">
+            <div class="input_data">
+              <input type="text" class="form-control" id="firstName" required autocomplete="off">
+              <div class="invalid-feedback d-none pb-2" id="firstNameMsg">
+                Your Name must contain between 3 and 10 chars!
+              </div>
+              <label for="">First Name</label>
+            </div>
+          </div>
+          <div class="wrapper mb-5">
+            <div class="input_data">
+              <input type="text" class="form-control" id="lastName" required autocomplete="off">
+              <div class="invalid-feedback d-none pb-2" id="lastNameMsg">
+                Your Name must contain between 3 and 10 chars!
+              </div>
+              <label for="">Last Name</label>
+            </div>
+          </div>
+          <div class="wrapper mb-5">
+            <div class="input_data">
+              <input type="text" class="form-control" id="email" required autocomplete="off">
+              <div class="invalid-feedback d-none pb-2" id="emailMsg">
+                Please enter a valid email !
+              </div>
+              <label for="">Email or phone number</label>
+            </div>
+          </div>
+          <div class="wrapper mb-5">
+            <div class="input_data">
+              <input type="password" class="form-control" id="password" required autocomplete="off">
+              <div class="invalid-feedback d-none pb-2" id="passMsg">
+                Your password must contain between 5 and 20 characters!
+              </div>
+              <label for="">Password</label>
+            </div>
+          </div>
+          <p class="text-success d-none text-center my-3" id="confirmMsg">Success</p>
+          <p class="text-success d-none text-center my-3" id="accountExistMsg">This account is exist ! Try another one.
+          </p>
+          <p class="text-success d-none text-center my-3" id="tryAgainMsg">Sign up failed ! Try again</p>
+
+          <button class="btn" id="signupBtn" onclick="signup()">Sign Up</button>
+          <div class="remember d-flex align-items-center justify-content-between w-100">
+            <div>
+              <input type="checkbox" name="remember" id="remember">
+              <label for="remember">Remember Me</label>
+            </div>
+            <span><a href="#">Need help?</a></span>
+          </div>
+          <div class="new py-4">
+            You Have An Email? <a href="../login/login.html">Sign In now</a>
+          </div>
+        </form>
+      </div>
+
+      <footer>
+        <p>Questions? Contact us. </p>
+        <div class="links">
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Corporate Information</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
