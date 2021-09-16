@@ -87,6 +87,13 @@ $(function () {
     })
 })
 
+// ====================ABOUT SIGN IN & SIGN UP PAGES AND AUTHENTICATION======================= 
+// ======Check if the localStorage is empty to go back to signIn page========
+function makeSure() {
+    if (localStorage.length === 0) {
+        window.location.href = 'login/login.html'
+    }
+}
 // ====== To get the first and last name from localStorage and put it into name list=======
 let firstName = localStorage.getItem("firstName");
 let lastName = localStorage.getItem("lastName");
