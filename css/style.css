@@ -48,6 +48,41 @@ nav .form {
   color: #fff;
   font-size: 1.1rem;
 }
+.form i {
+  cursor: pointer;
+}
+.form .logout {
+  position: relative;
+}
+.form .logout ul {
+  list-style: none;
+  background-color: #2e2e2e;
+  position: absolute;
+  right: 0;
+  width: 200px;
+  padding: 20px 15px;
+  border-radius: 5px;
+  display: none;
+}
+.logout ul li {
+  margin: 10px 0px !important;
+  font-size: 17px !important;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+  padding: 10px 0;
+}
+.logout ul li:first-of-type {
+  border-bottom: 1px solid #e5e5e5;
+}
+.logout:hover ul {
+  display: block;
+}
+.logout ul li a {
+  cursor: pointer;
+}
+.logout ul li a:hover {
+  text-decoration: underline;
+}
 /* ======END NAVBAR======= */
 
 /* =====START HEADER SECTION===== */

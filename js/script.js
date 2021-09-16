@@ -87,3 +87,13 @@ $(function () {
     })
 })
 
+// ====== To get the first and last name from localStorage and put it into name list=======
+let firstName = localStorage.getItem("firstName");
+let lastName = localStorage.getItem("lastName");
+let nameList = document.getElementById('name');
+nameList.innerHTML = firstName + " " + lastName;
+// ===== To clear localStorage and go back to sign in page=======
+function logout() {
+    localStorage.clear();
+    document.getElementById('logout').setAttribute('href', 'login/login.html')
+}
